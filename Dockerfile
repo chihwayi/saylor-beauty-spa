@@ -6,7 +6,7 @@ FROM node:22-alpine AS base
 FROM base AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm ci --include=dev
 
 # ---- build ----
 FROM base AS builder
@@ -22,6 +22,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs
