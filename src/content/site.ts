@@ -75,6 +75,15 @@ export const services: Service[] = [
     name: "Pedicure",
     description: "Relaxing soak, exfoliation and polish to keep your feet camera-ready.",
     priceFrom: "$12",
+    image: "/images/gallery/pedicure-stock.jpg",
+  },
+  {
+    id: "foot-spa-callus",
+    category: "Nails",
+    name: "Foot Spa & Callus Treatment",
+    description: "A warm-water soak followed by a deep scrub to buff away calluses and dead skin, leaving feet soft and smooth.",
+    priceFrom: "$15",
+    image: "/images/gallery/foot-scrub-stock.jpg",
   },
   {
     id: "nail-art",
