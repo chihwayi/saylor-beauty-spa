@@ -59,11 +59,20 @@ export default function Booking() {
           )}
 
           <div className="mt-6 pt-6 border-t border-haven-white/15">
+            <div className="overflow-hidden rounded-lg border border-haven-white/15 aspect-video">
+              <iframe
+                src={business.mapEmbedUrl}
+                title={`Map showing the ${business.name} location`}
+                className="size-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
             <a
               href={business.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-haven-gold hover:text-haven-white transition-colors"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-haven-gold hover:text-haven-white transition-colors"
             >
               <MapPin className="size-4 shrink-0" aria-hidden="true" />
               Get directions on Google Maps

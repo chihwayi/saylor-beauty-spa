@@ -12,8 +12,11 @@ export const business = {
   // Set to false to hide the address/map and stay appointment-only (recommended for now).
   showAddress: false,
   address: "PLACEHOLDER — ask Prisca for the studio address if walk-ins are welcome",
-  // Google Maps share link — used for the "Get directions" CTA and embedded map.
+  // Google Maps share link — used for the "Get directions" CTA (opens the native app on mobile).
   mapUrl: "https://maps.app.goo.gl/gAJgbWposh3HgSa79",
+  // Resolved from mapUrl (48 Selous Ave, Harare) — powers the embedded map pin below.
+  // No API key needed: Google's plain "output=embed" query format is public.
+  mapEmbedUrl: "https://www.google.com/maps?q=-17.8220048,31.0559595&z=16&output=embed",
 };
 
 export type Weekday = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
