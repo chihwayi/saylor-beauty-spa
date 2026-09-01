@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-haven-plum: #3d1f2b;
+  --color-haven-rose: #b5495b;
+  --color-haven-blush: #f2dcd8;
+  --color-haven-cream: #fbf6f1;
+  --color-haven-gold: #c79a5b;
+  --color-haven-ink: #231318;
+  --color-haven-white: #ffffff;
+
+  --font-display: var(--font-fraunces), serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --shadow-haven: 0 8px 30px -10px rgba(61, 31, 43, 0.18);
+
+  --animate-pulse-once: pulse-once 1.1s ease-in-out 1s 1;
+  --animate-rise-fade: rise-fade 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  @keyframes pulse-once {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.12);
+    }
+    60% {
+      transform: scale(0.98);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes rise-fade {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-haven-cream);
+  color: var(--color-haven-ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-haven-rose);
+  color: var(--color-haven-white);
+}
+
+/* Visible, on-brand keyboard focus ring on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-haven-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
