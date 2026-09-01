@@ -59,6 +59,7 @@ export const services: Service[] = [
     name: "Lash Lift & Tint",
     description: "A natural, no-extension curl and tint that lasts weeks without upkeep.",
     priceFrom: "$20",
+    image: "/images/gallery/lash-lift-stock.jpg",
   },
   {
     id: "manicure",

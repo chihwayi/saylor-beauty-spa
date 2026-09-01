@@ -1,7 +1,7 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
 import clsx from "clsx";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { buildWhatsAppLink, type WhatsAppNumberIndex } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { useUtm } from "@/components/UtmProvider";
@@ -56,7 +56,7 @@ export default function WhatsAppCta({
       onClick={() => trackWhatsAppClick(location, service)}
       className={clsx(base, variants[variant], sizes[size], className)}
     >
-      {icon && <MessageCircle className="size-4" aria-hidden="true" />}
+      {icon && <WhatsAppIcon className="size-4" />}
       {children}
     </a>
   );

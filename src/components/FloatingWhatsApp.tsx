@@ -1,7 +1,7 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
 import { buildWhatsAppLink, defaultBookingMessage } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { useUtm } from "@/components/UtmProvider";
 
@@ -17,7 +17,7 @@ export default function FloatingWhatsApp() {
       aria-label="Book on WhatsApp"
       className="fixed z-40 bottom-[calc(1.25rem+env(safe-area-inset-bottom))] right-[calc(1.25rem+env(safe-area-inset-right))] flex items-center justify-center size-14 rounded-full bg-haven-rose text-haven-white shadow-haven hover:bg-haven-plum hover:-translate-y-0.5 transition-all duration-150 animate-pulse-once"
     >
-      <MessageCircle className="size-7" aria-hidden="true" />
+      <WhatsAppIcon className="size-7" />
     </a>
   );
 }
