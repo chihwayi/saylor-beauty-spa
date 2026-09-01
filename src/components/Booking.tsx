@@ -1,5 +1,5 @@
 import { MapPin, ExternalLink } from "lucide-react";
-import { business } from "@/content/site";
+import { business, whatsapp } from "@/content/site";
 import WhatsAppCta from "@/components/WhatsAppCta";
 import SectionView from "@/components/SectionView";
 import OpeningHoursCard from "@/components/OpeningHoursCard";
@@ -38,7 +38,7 @@ export default function Booking() {
               variant="secondary"
               size="lg"
             >
-              Book — Line 2
+              {whatsapp.numbers[1].label}
             </WhatsAppCta>
           </div>
         </div>

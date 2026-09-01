@@ -61,7 +61,7 @@ export default function Services() {
                   variant="secondary"
                   className="mt-4 w-full"
                 >
-                  Book this
+                  {service.priceFrom === "TBC" ? "Inquire / get notified" : "Book this"}
                 </WhatsAppCta>
               </div>
             </article>

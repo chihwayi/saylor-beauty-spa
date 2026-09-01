@@ -63,6 +63,14 @@ function LocalBusinessJsonLd() {
     telephone: `+${whatsapp.numbers[0].e164}`,
     priceRange: "$$",
     hasMap: business.mapUrl,
+    ...(business.showAddress && {
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: business.address.split(",")[0].trim(),
+        addressLocality: business.address.split(",")[1]?.trim() ?? "Harare",
+        addressCountry: "ZW",
+      },
+    }),
     openingHoursSpecification: openingHours
       .filter((h) => h.open && h.close)
       .map((h) => ({

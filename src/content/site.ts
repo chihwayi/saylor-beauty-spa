@@ -9,9 +9,9 @@ export const business = {
   tagline: "Look Well, Feel Well, Be Well",
   valueProposition: "Premium lash, nail & massage therapy — booked in one tap.",
   ownerName: "Prisca",
-  // Set to false to hide the address/map and stay appointment-only (recommended for now).
-  showAddress: false,
-  address: "PLACEHOLDER — ask Prisca for the studio address if walk-ins are welcome",
+  // Set to false to hide the address text and stay appointment-only.
+  showAddress: true,
+  address: "48 Selous Ave, Harare", // resolved from the studio's Google Maps share link — confirm with Prisca
   // Google Maps share link — used for the "Get directions" CTA (opens the native app on mobile).
   mapUrl: "https://maps.app.goo.gl/gAJgbWposh3HgSa79",
   // Resolved from mapUrl (48 Selous Ave, Harare) — powers the embedded map pin below.
@@ -45,7 +45,7 @@ export const whatsapp = {
   // so the numbers can be changed per-deploy without editing this file.
   numbers: [
     { label: "Book with Prisca", e164: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_1 || "263717242438" },
-    { label: "Book — Line 2", e164: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_2 || "263774165704" },
+    { label: "Reception / After-hours", e164: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_2 || "263774165704" },
   ],
 };
 
