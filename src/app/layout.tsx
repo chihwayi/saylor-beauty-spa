@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { business, seo, whatsapp } from "@/content/site";
+import { business, seo, whatsapp, openingHours } from "@/content/site";
 import { UtmProvider } from "@/components/UtmProvider";
 import ScrollDepthTracker from "@/components/ScrollDepthTracker";
 
@@ -62,13 +62,14 @@ function LocalBusinessJsonLd() {
     url: seo.siteUrl,
     telephone: `+${whatsapp.numbers[0].e164}`,
     priceRange: "$$",
-    openingHoursSpecification: business.hours
-      .filter((h) => h.time !== "Closed")
+    hasMap: business.mapUrl,
+    openingHoursSpecification: openingHours
+      .filter((h) => h.open && h.close)
       .map((h) => ({
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: h.days,
-        opens: h.time.split(" – ")[0],
-        closes: h.time.split(" – ")[1],
+        dayOfWeek: `https://schema.org/${h.day}`,
+        opens: h.open,
+        closes: h.close,
       })),
   };
 

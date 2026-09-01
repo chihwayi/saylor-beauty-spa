@@ -12,12 +12,30 @@ export const business = {
   // Set to false to hide the address/map and stay appointment-only (recommended for now).
   showAddress: false,
   address: "PLACEHOLDER — ask Prisca for the studio address if walk-ins are welcome",
-  hours: [
-    { days: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
-    { days: "Saturday", time: "9:00 AM – 4:00 PM" },
-    { days: "Sunday", time: "Closed" },
-  ], // PLACEHOLDER — confirm real hours with Prisca
+  // Google Maps share link — used for the "Get directions" CTA and embedded map.
+  mapUrl: "https://maps.app.goo.gl/gAJgbWposh3HgSa79",
 };
+
+export type Weekday = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+
+export interface DaySchedule {
+  day: Weekday;
+  // 24h "HH:MM" local studio time, or null for a closed day.
+  open: string | null;
+  close: string | null;
+}
+
+// The studio's real, per-day schedule (24h time, Africa/Harare) — PLACEHOLDER, confirm with Prisca.
+// Drives both the "Open now" badge and the grouped hours list — no need to keep both in sync by hand.
+export const openingHours: DaySchedule[] = [
+  { day: "Monday", open: "09:00", close: "18:00" },
+  { day: "Tuesday", open: "09:00", close: "18:00" },
+  { day: "Wednesday", open: "09:00", close: "18:00" },
+  { day: "Thursday", open: "09:00", close: "18:00" },
+  { day: "Friday", open: "09:00", close: "18:00" },
+  { day: "Saturday", open: "09:00", close: "16:00" },
+  { day: "Sunday", open: null, close: null },
+];
 
 export const whatsapp = {
   // Overridable via NEXT_PUBLIC_WHATSAPP_NUMBER_1/2 (digits only, country code first, no "+")

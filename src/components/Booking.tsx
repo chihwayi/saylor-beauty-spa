@@ -1,7 +1,8 @@
-import { Clock, MapPin } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { business } from "@/content/site";
 import WhatsAppCta from "@/components/WhatsAppCta";
 import SectionView from "@/components/SectionView";
+import OpeningHoursCard from "@/components/OpeningHoursCard";
 import { defaultBookingMessage } from "@/lib/whatsapp";
 
 export default function Booking() {
@@ -43,22 +44,7 @@ export default function Booking() {
         </div>
 
         <div className="rounded-xl bg-haven-white/5 border border-haven-white/15 p-7">
-          <div className="flex items-start gap-3">
-            <Clock className="size-5 text-haven-gold shrink-0 mt-0.5" aria-hidden="true" />
-            <div>
-              <h3 className="font-display text-[1.25rem] font-semibold text-haven-white">
-                Opening hours
-              </h3>
-              <dl className="mt-3 space-y-1.5 text-sm text-haven-blush">
-                {business.hours.map((h) => (
-                  <div key={h.days} className="flex justify-between gap-4">
-                    <dt>{h.days}</dt>
-                    <dd>{h.time}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
+          <OpeningHoursCard />
 
           {business.showAddress && (
             <div className="flex items-start gap-3 mt-6 pt-6 border-t border-haven-white/15">
@@ -71,6 +57,19 @@ export default function Booking() {
               </div>
             </div>
           )}
+
+          <div className="mt-6 pt-6 border-t border-haven-white/15">
+            <a
+              href={business.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-haven-gold hover:text-haven-white transition-colors"
+            >
+              <MapPin className="size-4 shrink-0" aria-hidden="true" />
+              Get directions on Google Maps
+              <ExternalLink className="size-3.5 shrink-0" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </SectionView>
