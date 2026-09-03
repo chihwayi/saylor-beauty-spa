@@ -118,8 +118,8 @@ export const services: Service[] = [
     id: "massage",
     category: "Massage",
     name: "Full Body & Relaxation Massage",
-    description: "Swedish and deep-tissue techniques to release tension and restore calm.",
-    priceFrom: "$30",
+    description: "Coming soon — currently on hold while a more private treatment space is arranged. Swedish and deep-tissue techniques to release tension and restore calm.",
+    priceFrom: "TBC",
     image: "/images/gallery/massage-spa-stock.jpg",
   },
   {
