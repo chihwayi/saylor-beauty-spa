@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(seo.siteUrl),
   title: seo.title,
   description: seo.description,
+  keywords: seo.keywords,
   alternates: { canonical: "/" },
   openGraph: {
     title: seo.title,
@@ -63,6 +64,10 @@ function LocalBusinessJsonLd() {
     telephone: `+${whatsapp.numbers[0].e164}`,
     priceRange: "$$",
     hasMap: business.mapUrl,
+    areaServed: {
+      "@type": "City",
+      name: "Harare",
+    },
     ...(business.showAddress && {
       address: {
         "@type": "PostalAddress",

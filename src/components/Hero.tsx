@@ -26,6 +26,9 @@ export default function Hero() {
           <h1 className="font-display text-[2.25rem] leading-[1.1] md:text-[4rem] font-semibold text-haven-white text-balance">
             {business.name}
           </h1>
+          <p className="mt-2 text-sm font-medium uppercase tracking-wide text-haven-gold">
+            Nail Salon &amp; Lash Studio in Harare
+          </p>
           <div
             className="mt-4 h-px w-20 bg-haven-gold"
             aria-hidden="true"

@@ -21,10 +21,9 @@ export default function About() {
           <div className="mt-4 h-px w-16 bg-haven-gold" aria-hidden="true" />
           <p className="mt-6 text-haven-ink/85 leading-relaxed">
             {business.ownerName} founded {business.name} to bring boutique-studio
-            care to every appointment — meticulous lash and nail work, and
-            massage therapy that actually lets you switch off. Every client
-            leaves with the same promise behind the name: look well, feel
-            well, be well.
+            care to every appointment in Harare — meticulous lash and nail
+            work that leaves every client with the same promise behind the
+            name: look well, feel well, be well.
           </p>
           <p className="mt-4 text-haven-ink/85 leading-relaxed">
             Booking is simple by design — message {business.ownerName} directly on

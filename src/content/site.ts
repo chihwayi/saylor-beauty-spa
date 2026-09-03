@@ -7,7 +7,7 @@
 export const business = {
   name: "Saylor Beauty Spa",
   tagline: "Look Well, Feel Well, Be Well",
-  valueProposition: "Premium lash, nail & massage therapy — booked in one tap.",
+  valueProposition: "Harare's boutique nail & lash studio — booked in one tap on WhatsApp.",
   ownerName: "Prisca",
   // Set to false to hide the address text and stay appointment-only.
   showAddress: true,
@@ -191,7 +191,17 @@ export const gallery = [
 
 export const seo = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://saylorbeautyspa.example.com", // PLACEHOLDER — set NEXT_PUBLIC_SITE_URL once domain is live
-  title: "Saylor Beauty Spa — Lash, Nail & Massage Studio | Book on WhatsApp",
+  title: "Saylor Beauty Spa — Nail Salon & Lash Studio in Harare | Book on WhatsApp",
   description:
-    "Saylor Beauty Spa is a premium boutique lash, nail and massage studio run by Prisca. Book your appointment instantly on WhatsApp.",
+    "Saylor Beauty Spa is a boutique nail salon and lash studio in Harare, run by Prisca. Gel & acrylic nail art, eyelash extensions, lash lifts, pedicures and more — book instantly on WhatsApp.",
+  keywords: [
+    "nail salon Harare",
+    "lash extensions Harare",
+    "gel nails Harare",
+    "nail art Harare",
+    "manicure pedicure Harare",
+    "eyelash extensions Zimbabwe",
+    "lash lift Harare",
+    "acrylic nails Harare",
+  ],
 };
